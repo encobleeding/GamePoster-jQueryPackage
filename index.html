@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<style>
+	body {
+		width: 100%;
+	  overflow-x: hidden;
+	  margin: 0;
+	  color: #fff;
+	  background: url(img/fes_main_bg.png) repeat 50% 50%;
+	}
+
+	.nGyroParallax1 {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transition: .5s ease-out;
+	}
+
+
+	#chouchin-1-1 {
+	  margin: -300px 0 0 -600px;
+		z-index: 999;
+	}
+	#chouchin-1-2 {
+	  margin: 0px 0 0 -300px;
+		z-index: 999;
+	}
+	#QRcode {
+	  margin: -240px 0 0 -490px;
+	}
+	#logo {
+		margin: -280px 0 0 -450px;
+	}
+
+	#logo img,
+	#QRcode img,
+	#chouchin-1-1 img,
+	#chouchin-1-2 img {
+	  transform: translate3d(0,0,0);
+	  transition: .5s;
+		-webkit-filter: drop-shadow(4px 0 3px black);
+	  -ms-filter: drop-shadow(4px 0 3px black);
+	  filter: drop-shadow(4px 0 3px black);
+	}
+
+
+	#ink1-1 {
+	  margin: 50px 0 0 100px;
+	}
+	#ink1-2 {
+	  margin: -350px 0 0 -200px;
+	}
+	#ink1-3 {
+		margin: -300px 0 0 -650px;
+	}
+
+	#ink1-2 img,
+	#ink1-1 img {
+		transform: translate3d(0,0,0);
+	  transition: .5s;
+	}
+
+	#aori {
+	  margin: -450px 0 0 -200px;
+	}
+	#hotaru {
+	  margin: -237px 0 0 40px;
+	}
+
+
+	#aori img,
+	#hotaru img {
+	  transform: translate3d(0,0,0);
+	  -webkit-filter: drop-shadow(4px 0 3px black);
+	  -ms-filter: drop-shadow(4px 0 3px black);
+	  filter: drop-shadow(4px 0 3px black);
+	  transition: .5s;
+	}
+
+	@media screen and (max-width: 30em) {
+		body {
+			width: 100%;
+		}
+		#aori img,
+		#hotaru img {
+			display: none;
+		}
+
+		#chouchin-1-1 {
+		  margin: -300px 0 0 -600px;
+			z-index: 999;
+			display: none;
+		}
+		#chouchin-1-2 {
+		  margin: 0px 0 0 -300px;
+			z-index: 999;
+			display: none;
+		}
+		#QRcode {
+		  margin: -180px 0 0 -140px;
+		}
+		#logo {
+			margin: -240px 0 0 -130px;
+		}
+	}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+		<div id="ink1-3" class="nGyroParallax1">
+		  <img src="img/03.png" alt="" width="600" height="600">
+		</div>
+		<div id="ink1-1" class="nGyroParallax1">
+		  <img src="img/fes_ink1-1.png" alt="" width="445" height="373">
+		</div>
+		<div id="ink1-2" class="nGyroParallax1">
+		  <img src="img/fes_ink1-2.png" alt="" width="379" height="412">
+		</div>
+
+		<div id="chouchin-1-1" class="nGyroParallax1">
+		  <img src="img/fes_chouchin.png" alt="" width="151" height="267">
+		</div>
+		<div id="chouchin-1-2" class="nGyroParallax1">
+		  <img src="img/fes_chouchin.png" alt="" width="151" height="267">
+		</div>
+		<div id="QRcode" class="nGyroParallax1">
+		  <img src="img/02.png" alt="" width="300" height="400">
+		</div>
+		<div id="logo" class="nGyroParallax1">
+		  <img src="img/04.png" alt="" width="250" height="150">
+		</div>
+		<div id="aori" class="nGyroParallax1">
+		  <img src="img/01.png" alt="" width="800" height="800">
+		</div>
+		<!-- <div id="hotaru" class="nGyroParallax1">
+		  <img src="img/sc_hotaru.png" alt="" width="202" height="474">
+		</div> -->
+
+	</div>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src='dist/jquery.nGyroParallax.js'></script>
+	<script src='dist/jquery.nGyroParallax.min.js'></script>
+	<script src="dist/jquery.nGyroParallax.min.sourcemap.js"></script>
+
+	<script>
+	$(function(){
+	  $(window).load(function(){
+	    $('#chouchin-1-1').nGyroParallax({
+	      magnification: .003
+	    });
+	    $('#chouchin-1-2').nGyroParallax({
+	      magnification: .003
+	    });
+			$('#QRcode').nGyroParallax({
+	      magnification: .003
+	    });
+	    $('#aori').nGyroParallax({
+				magnification: .005
+			});
+			$('#ink1-1').nGyroParallax({
+				magnification: -.008
+			});
+			$('#ink1-2').nGyroParallax({
+				magnification: .008
+			});
+			$('#logo').nGyroParallax({
+				magnification: .003
+			});
+
+			if($(window).width()<=640){
+				$('#logo').nGyroParallax({
+					magnification: .003
+				});
+				$('#QRcode').nGyroParallax({
+		      magnification: .003
+		    });
+				$('#ink1-1').nGyroParallax();
+				$('#ink1-2').nGyroParallax();
+			}
+	  });
+
+	});
+	</script>
+</body>
+</html>
